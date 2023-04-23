@@ -4,6 +4,8 @@ close all
 clf
 global Pstar cstar n maxcount M Q camax RT cI;
 
+%task 7: changed cstar in setup
+
 %After running setup_lung once I commented out lines 60-74 on setup_lung.
 %This is so there is no random initiaization and I use constant ventilation
 %vs perfursion for the tasks now to better compare someone used to sealevel
