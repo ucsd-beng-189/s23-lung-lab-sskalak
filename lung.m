@@ -11,7 +11,7 @@ global Pstar cstar n maxcount M Q camax RT cI;
 
 %using percent O2 at various altitudes to then do task 6 next easily 
 O2percents = [20.9 20.1 19.4 18.6 17.9 17.3 16.6 16.0 15.4 14.8 14.3 13.7 13.2 12.7 12.3 11.8 11.4 11.0 10.5 10.1 9.7 9.4 9.0 8.7 8.4 8.1 7.8 7.5 7.2 6.9]/100;
-%altitude = 0:1000:29000;
+altitude = 0:1000:29000;
 
 for i=1:length(O2percents)
 
@@ -43,7 +43,7 @@ hold on
 plot(cIlist, PAlist);
 plot(cIlist, Pvlist); 
 legend('mean arterial O2 partial pressure','mean alveolar O2 partial pressure','O2 partial pressure in venous blood')
-xlabel('altitude (feet)')
+xlabel('cI (moles/L')
  set(gca, 'XTickLabel',get(gca,'XTick')) 
  set ( gca, 'xdir', 'reverse' )
 ylabel('Partial pressures of O2 (mmHg)')
@@ -56,7 +56,7 @@ hold on
 plot(cIlist, cabarList);
 plot(cIlist, cAbarlist); 
 legend('O2 conc in venous blood','mean arterial O2 conc','mean alveolar O2 conc','Location', 'southwest')
-xlabel('altitude (feet)')
+xlabel('cI (moles/L)')
 ylabel('Concentrations of O2 (moles/Liter)')
  set(gca, 'XTickLabel',get(gca,'XTick')) 
  set ( gca, 'xdir', 'reverse' )
