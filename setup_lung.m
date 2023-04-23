@@ -16,7 +16,7 @@ cref=0.209/(22.4*(310/273))
 %in air at sea level at body temperature
 %
 %oxygen concentration in the inspired air:
-cI=cref
+%cI=cref
 %
 %blood oxygen concentration
 %at full hemoglobin saturation: 
@@ -57,7 +57,7 @@ VAbar=VAtotal/n
 %expected perfusion per alveolus: 
 Qbar=Qtotal/n 
 
-
+%{
 a1=-log(rand(n,1));
 a2=-log(rand(n,1));
 av=(a1+a2)/2;        
@@ -66,10 +66,10 @@ Q = Qbar*(a2*beta+av*(1-beta));
 r=VA./Q;
 figure(1)
 plot(Q,VA,'.')
-
 %find actual values of 
 %VAtotal, Qtotal, VAbar, and Qbar:
 VAtotal=sum(VA)
 Qtotal =sum(Q)
 VAbar=VAtotal/n
 Qbar= Qtotal/n
+%}
